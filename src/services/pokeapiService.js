@@ -74,7 +74,9 @@ export const getSearchList = async (search) => {
   try {
     const pokeLista = await axios.get(GET_POKEDEX_LIST(1))
     const searchList = pokeLista.data.pokemon_entries.filter(
-      (el) => el.pokemon_species.name.indexOf(search) > -1
+      (el) =>
+        el.pokemon_species.name.indexOf(search) > -1 ||
+        String(el.entry_number).indexOf(search) > -1
     )
     return searchList
   } catch (err) {

@@ -108,15 +108,21 @@ const PokemonDetails = (props) => {
           <br />
           <div className={classes.evolutionBlock}>{renderEvolutionChain()}</div>
         </Grid>
-        <Grid item md={6} sm={12}>
-          Estatísticas base
-          {renderStatsBar()}
+        <Grid container md={6} sm={12}>
+          <Grid xs={12} item>
+            <span className={classes.detailsText}>Estatísticas base</span>
+            {renderStatsBar()}
+          </Grid>
           <Grid xs={12} container className={classes.additionalInfo}>
             <Grid item xs={6}>
-              Altura: {pokemon.height * 10} centimetros
+              <span className={classes.detailsText}>
+                Altura: {pokemon.height * 10} centimetros
+              </span>
             </Grid>
             <Grid item xs={6}>
-              Peso: {pokemon.weight / 10} quilos
+              <span className={classes.detailsText}>
+                Peso: {pokemon.weight / 10} quilos
+              </span>
             </Grid>
           </Grid>
         </Grid>

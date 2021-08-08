@@ -1,19 +1,10 @@
 import { makeStyles } from "@material-ui/styles"
 
 export default makeStyles({
-  cardsContainer: {
+  headerContainer: {
     display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-evenly",
-    /*Both these lines are only useful for the loader*/
-    height: "100%",
-    alignItems: "center",
-  },
-  navigationButtons: {
-    margin: "40px 0",
-    display: "flex",
-    alignItens: "center",
-    justifyContent: "space-evenly",
+    alignItems: "flex-end",
+    margin: "0 40px",
   },
   modalInfo: {
     display: "flex",

@@ -32,6 +32,7 @@ export default makeStyles({
   },
   StatBlock: {},
   StatName: {
+    fontSize: "14px",
     marginTop: "5px",
     marginBottom: 0,
     textTransform: "capitalize",
@@ -50,6 +51,10 @@ export default makeStyles({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
+  },
+  detailsText: {
+    fontSize: "14px",
+    fontWeight: "700",
   },
   additionalInfo: {
     marginTop: "30px",

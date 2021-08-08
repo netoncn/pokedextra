@@ -1,5 +1,5 @@
 import { Login } from "pages/Login"
 import { List } from "pages/List"
-import { Search } from "pages/Search"
+import { ListGraphQl } from "pages/ListGraphQl"
 
-export { Login, List, Search }
+export { Login, List, ListGraphQl }

@@ -9,7 +9,7 @@ import Box from "@material-ui/core/Box"
 
 import useStyles from "./styles"
 
-const SearchBox = () => {
+const SearchBox = (props) => {
   const [search, setSearch] = useState("")
   const history = useHistory()
   const classes = useStyles()
@@ -21,7 +21,12 @@ const SearchBox = () => {
   }
 
   const handleSearch = () => {
-    if (search.trim() === "") return history.push(path.LIST)
+    if (search.trim() === "")
+      return props.path === "graphQl"
+        ? history.push(path.LISTGRAPHQL)
+        : history.push(path.LIST)
+    if (props.path === "graphQl")
+      return history.push(`${path.LISTGRAPHQL}/${search}`)
     history.push(`${path.LIST}/${search}`)
   }
 

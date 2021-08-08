@@ -6,7 +6,6 @@ import useStyles from "./styles"
 const PokemonCard = (props) => {
   const [captured, setCaptured] = useState(false)
   const classes = useStyles({ ...props, captured })
-
   useEffect(() => {
     setCaptured(props.captured)
   }, [props])
@@ -25,7 +24,11 @@ const PokemonCard = (props) => {
             number={props.number}
           />
         </div>
-        <img src={props.thumb} className={classes.pokeImage} alt={props.name} />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.number}.png`}
+          className={classes.pokeImage}
+          alt={props.name}
+        />
         <h3 className={classes.pokeNumber}>
           # {String(props.number).padStart(3, "0")}
         </h3>

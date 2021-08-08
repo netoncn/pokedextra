@@ -16,6 +16,9 @@ export default makeStyles({
   logoImage: {
     alignSelf: "center",
     maxWidth: "700px",
+    ["@media (max-width:780px)"]: {
+      maxWidth: "100%",
+    },
   },
   loginBottom: {
     display: "flex",

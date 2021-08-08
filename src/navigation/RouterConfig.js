@@ -2,7 +2,7 @@ import { Switch } from "react-router-dom"
 import { AuthRoute } from "./RedirectRoutes"
 import { path } from "navigation/CONSTANTS"
 
-import { Login, List, Search, Pokedex } from "pages"
+import { Login, List, ListGraphQl, Pokedex } from "pages"
 
 export const RouterConfig = () => {
   return (
@@ -13,6 +13,11 @@ export const RouterConfig = () => {
         variant="private"
         path={`${path.LIST}/:search?`}
         component={List}
+      />
+      <AuthRoute
+        variant="private"
+        path={`${path.LISTGRAPHQL}/:search?`}
+        component={ListGraphQl}
       />
     </Switch>
   )
