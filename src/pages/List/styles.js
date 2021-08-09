@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles"
+import { color } from "app/ui/Theme/colors"
 
 export default makeStyles({
   headerContainer: {
@@ -27,8 +28,8 @@ export default makeStyles({
     justifyContent: "center",
   },
   modalPaper: {
-    backgroundColor: "#DEDEDE",
-    border: "2px solid #FFF",
+    backgroundColor: color.lightgrey,
+    border: `2px solid ${color.white}`,
     padding: "30px",
     minWidth: "320px",
     minHeight: "350px",

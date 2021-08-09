@@ -19,6 +19,11 @@ export const RouterConfig = () => {
         path={`${path.LISTGRAPHQL}/:search?`}
         component={ListGraphQl}
       />
+      <AuthRoute
+        variant="private"
+        path={`${path.POKEDEX}`}
+        component={Pokedex}
+      />
     </Switch>
   )
 }

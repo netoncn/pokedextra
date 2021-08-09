@@ -1,3 +1,59 @@
+# Pokédex
+
+Conforme conversamos, gostamos do nosso bate papo, e para prosseguirmos com o processo, segue abaixo o teste técnico para avaliarmos melhor a qualidade do seu código e seu raciocínio lógico.  Queremos que você desenvolva um catálogo de pokémons que tenha suporte para adicionar e excluir novos pokémons a Pokédex, e, para isso será necessário que você desenvolva o front-end desta aplicação e recomendamos o uso da API [Pokeapi V2](https://pokeapi.co/docs/v2). 
+
+# Requisitos necessários:
+
+### Filtro de busca do pokémon
+
+* Pesquisa através do nome ou número do pokémon ✅
+
+### Botão para adicionar (capturar) o novo pokémon na Pokédex
+
+* A lista de sua Pokédex deve estar vazia a princípio. ✅
+
+### Listagem dos pokémons adicionados a Pokédex
+
+* Nome e imagem com limite de 10 pokémons por exibição, deverá conter uma paginação em grid de 10/10. ✅
+
+### Detalhe do Pokémon
+
+Botão ou mecanismo similar para abertura de uma nova página com detalhes do quadrinho. ✅
+
+A página de detalhe deve conter
+*  Nome ✅
+* Imagem ✅
+* Tamanho ✅
+* Lista de tipos ✅
+* Velocidade ✅
+* Defesa ✅
+* Ataque ✅
+* Hp ✅
+* Passos da evolução ✅
+
+
+## Botão para excluir o pokémon
+
+* Opção para excluir o pokémon que foi adicionado na Pokédex ✅
+
+## Extras
+
+* Boas práticas de codificação ✅
+* Cobertura de testes ❌ (Cobertura de testes dos componentes baixa)
+* Aplicação responsiva ✅
+* Design similar ao de uma pokédex ✅ (Baseado no https://cdpn.io/cp/internal/boomboom/index.html?key=index.html-af5d6b38-c525-67da-b153-b009381c1e4a)
+
+
+O código deve estar em um repositório público. ✅
+
+## Extras Pessoais
+
+* Página de lista com request sendo feito com GraphQl ✅
+* Lista de captura utilizando database do firebase ✅
+* Autenticação utilizando firebase ✅
+* Projeto hospedado no Heroku: http://pokedextra.herokuapp.com/
+
+# React Create App Readme
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +124,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Firebase
+
+Para funcionamento do código é necessário criar o projeto no Firebase, habilitar autenticação por email e realtime database.
+Criar arquivo .env.local com as seguintes variaveis:
+
+REACT_APP_API_KEY
+REACT_APP_AUTH_DOMAIN
+REACT_APP_DATABASE_URL
+REACT_APP_PROJECT_ID
+REACT_APP_STORAGE_BUCKET
+REACT_APP_MESSAGING_SENDER_ID
+REACT_APP_APP_ID

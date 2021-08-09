@@ -7,6 +7,7 @@ import useStyles from "./styles"
 
 const LoginForm = () => {
   const [loginUser, setLoginUser] = React.useState({ email: "", password: "" })
+  const [error, setError] = React.useState("")
   const history = useHistory()
   const { user, signInWithEmail } = useAuth()
   const classes = useStyles()
@@ -15,8 +16,8 @@ const LoginForm = () => {
     if (loginUser.email.trim() === "" || loginUser.password.trim() === "")
       return
 
-    if (!user) await signInWithEmail(loginUser.email, loginUser.password)
-    history.push(path.APP_HOME)
+    const res = await signInWithEmail(loginUser.email, loginUser.password)
+    setError(res)
   }
 
   return (
@@ -36,6 +37,7 @@ const LoginForm = () => {
           setLoginUser({ ...loginUser, password: event.target.value })
         }
       />
+      {error}
       <Button
         onClick={handleLogin}
         type="submit"

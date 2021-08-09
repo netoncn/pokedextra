@@ -1,5 +1,4 @@
 import { Redirect, Route } from "react-router-dom"
-// import { PageContainer } from "app/ui/PageContainer"
 import { path } from "navigation/CONSTANTS"
 import { useAuth } from "hooks/useAuth"
 
@@ -16,13 +15,7 @@ export const AuthRoute = ({ component: Component, ...rest }) => {
   }
 
   const renderPage = () => {
-    return (
-      <>
-        {/* <PageContainer signed={signed} variant={signed ? "boxed" : "fullWidth"}> */}
-        <Component {...rest} />
-        {/* </PageContainer> */}
-      </>
-    )
+    return <Component {...rest} />
   }
 
   const renderPrivateRoute = () => {

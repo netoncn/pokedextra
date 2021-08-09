@@ -15,10 +15,9 @@ const handleCaptured = (captured) => {
 
 export default makeStyles({
   cardContainer: {
-    flexBasis: "17%",
     position: "relative",
     height: "250px",
-    boxShadow: "0 3px 15px rgba(100, 100, 100, 0.5)",
+    boxShadow: `0 3px 15px ${color.changeBackground}`,
     borderRadius: "20px",
     transition: "transform 1.5s",
     transformStyle: "preserve-3d",
@@ -33,9 +32,10 @@ export default makeStyles({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "20px",
-    border: "4px solid #fff",
+    border: `4px solid ${color.white}`,
     backfaceVisibility: "hidden",
     background: (props) => getCardBackground(props.types),
+    cursor: "pointer",
   },
   captureButton: {
     position: "absolute",
@@ -49,7 +49,7 @@ export default makeStyles({
     borderRadius: "20px",
     padding: "3px 10px",
     fontSize: "1.1rem",
-    background: "rgba(0, 0, 0, 0.2)",
+    background: color.transparentBlack,
   },
   pokeName: {
     fontWeight: "bold",

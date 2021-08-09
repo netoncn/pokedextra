@@ -6,7 +6,7 @@ export default makeStyles({
     gridTemplateColumns: "repeat(5, auto)",
     gridColumnGap: "2%",
     padding: "0 2%",
-    ["@media (max-width:780px)"]: {
+    ["@media (max-width:740px)"]: {
       gridTemplateColumns: "repeat(2, auto)",
     },
   },

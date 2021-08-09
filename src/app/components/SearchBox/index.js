@@ -26,8 +26,8 @@ const SearchBox = (props) => {
         ? history.push(path.LISTGRAPHQL)
         : history.push(path.LIST)
     if (props.path === "graphQl")
-      return history.push(`${path.LISTGRAPHQL}/${search}`)
-    history.push(`${path.LIST}/${search}`)
+      return history.push(`${path.LISTGRAPHQL}/${search.toLowerCase()}`)
+    history.push(`${path.LIST}/${search.toLowerCase()}`)
   }
 
   const searchIconBtn = () => {

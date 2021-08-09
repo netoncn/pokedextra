@@ -3,4 +3,5 @@ export const path = {
   LOGIN: "/login",
   LIST: "/list",
   LISTGRAPHQL: "/listgraphql",
+  POKEDEX: "/pokedex",
 }

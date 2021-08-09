@@ -20,28 +20,15 @@ export const AuthContextProvider = (props) => {
     return unsubscribe
   }, [])
 
-  const signInWithGoogle = async () => {
-    const provider = new auth.GoogleAuthProvider()
-    const result = await auth.signInWithPopup(provider)
-
-    if (result.user) {
-      const { displayName, photoURL, uid, email } = result.user
-      if (!displayName || !photoURL) {
-        throw new Error("Missing information from Google Account")
-      }
-
-      setUser({ id: uid, name: displayName, avatar: photoURL, email: email })
-    }
-  }
-
   const signInWithEmail = async (email, password) => {
-    const result = await auth.signInWithEmailAndPassword(email, password)
-
-    if (result.user) {
-      const { displayName, photoURL, uid, email } = result.user
-      setUser({ id: uid, name: displayName, avatar: photoURL, email: email })
-    } else {
-      setUser({ error: result.error })
+    try {
+      const result = await auth.signInWithEmailAndPassword(email, password)
+      if (result.user) {
+        const { displayName, photoURL, uid, email } = result.user
+        setUser({ id: uid, name: displayName, avatar: photoURL, email: email })
+      }
+    } catch (err) {
+      return err.message
     }
   }
 
@@ -60,11 +47,10 @@ export const AuthContextProvider = (props) => {
     auth
       .signOut()
       .then(() => {
-        // Sign-out successful.
         setUser(null)
       })
-      .catch((error) => {
-        // An error happened.
+      .catch((err) => {
+        console.log(err)
       })
   }
 
@@ -74,7 +60,6 @@ export const AuthContextProvider = (props) => {
         loading,
         signed: !!user,
         user,
-        signInWithGoogle,
         signInWithEmail,
         createUserWithEmail,
         logout,

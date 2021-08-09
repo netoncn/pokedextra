@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/styles"
 import { color } from "app/ui/Theme/colors"
 
 const getCardBackground = (pokemonTypes) => {
-  if (!pokemonTypes) return "#CCC"
+  if (!pokemonTypes) return color.grey
   const types = pokemonTypes.map((el) => el.type.name)
   if (types[1]) {
     return `linear-gradient(135deg, ${color[types[0]]} 50%, ${

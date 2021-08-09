@@ -1,11 +1,12 @@
 import { makeStyles } from "@material-ui/styles"
+import { color } from "app/ui/Theme/colors"
 
 export default makeStyles({
   loginPage: {
     display: "flex",
     alignItems: "center",
     height: "100vh",
-    background: "linear-gradient(0deg, #FFF 54%, #000 55%, red 56%)",
+    background: `linear-gradient(0deg, ${color.white} 54%, ${color.black} 55%, ${color.red} 56%)`,
     flexDirection: "column",
   },
   loginTop: {
@@ -30,7 +31,7 @@ export default makeStyles({
   },
   separator: {
     fontSize: "14px",
-    color: "#BBB",
+    color: color.grey,
     margin: "32px 0",
     width: "100%",
     textAlign: "center",

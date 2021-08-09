@@ -9,6 +9,8 @@ import PokemonCard from "app/components/PokemonCard"
 import PokemonDetails from "app/components/PokemonDetails"
 import SearchBox from "app/components/SearchBox"
 import LogoutButton from "app/components/LogoutButton"
+import ChangeRequestButton from "app/components/ChangeRequestButton"
+import ChangeViewModeButton from "app/components/ChangeViewModeButton"
 import { useAuth } from "hooks/useAuth"
 import {
   getPokemonList,
@@ -142,6 +144,8 @@ export const List = () => {
 
   return (
     <>
+      <ChangeRequestButton />
+      <ChangeViewModeButton />
       <div className={classes.headerContainer}>
         <SearchBox />
         <LogoutButton />

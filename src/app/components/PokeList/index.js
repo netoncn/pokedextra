@@ -45,8 +45,6 @@ const PokeList = (props) => {
     setPokeList(list.slice(offset, thisLimit))
   }, [offset, list])
 
-  const getList = () => {}
-
   const prev = () => {
     setOffset((offset) => offset - props.limit)
   }

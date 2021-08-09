@@ -10,12 +10,11 @@ import PokeList from "app/components/PokeList"
 import SearchBox from "app/components/SearchBox"
 import LogoutButton from "app/components/LogoutButton"
 import Loading from "app/components/Loading"
+import ChangeRequestButton from "app/components/ChangeRequestButton"
+import ChangeViewModeButton from "app/components/ChangeViewModeButton"
 import { useAuth } from "hooks/useAuth"
 import { useQuery } from "@apollo/client"
-import {
-  GraphGetPokemonList,
-  GraphGetPokemonSearch,
-} from "services/pokeapiGraphQl"
+import { GraphGetPokemonList } from "services/pokeapiGraphQl"
 import { getAllCaptured } from "services"
 
 import useStyles from "./styles"
@@ -61,6 +60,8 @@ export const ListGraphQl = () => {
 
   return (
     <>
+      <ChangeRequestButton />
+      <ChangeViewModeButton />
       <div className={classes.headerContainer}>
         <SearchBox path="graphQl" />
         <LogoutButton />
