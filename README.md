@@ -41,7 +41,7 @@ A página de detalhe deve conter
 * Boas práticas de codificação ✅
 * Cobertura de testes ❌ (Cobertura de testes dos componentes baixa)
 * Aplicação responsiva ✅
-* Design similar ao de uma pokédex ✅ (Baseado no https://cdpn.io/cp/internal/boomboom/index.html?key=index.html-af5d6b38-c525-67da-b153-b009381c1e4a)
+* Design similar ao de uma pokédex ✅ (Baseado na pokedex do Wikode)
 
 
 O código deve estar em um repositório público. ✅
