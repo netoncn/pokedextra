@@ -10,7 +10,7 @@ export const AuthRoute = ({ component: Component, ...rest }) => {
       case "private":
         return path.LOGIN
       default:
-        return path.LIST
+        return path.LISTGRAPHQL
     }
   }
 
