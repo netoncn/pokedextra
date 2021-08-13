@@ -51,7 +51,7 @@ O código deve estar em um repositório público. ✅
 * Página de lista com request sendo feito com GraphQl ✅
 * Lista de captura utilizando database do firebase ✅
 * Autenticação utilizando firebase ✅
-* Projeto hospedado no Heroku: http://pokedextra.herokuapp.com/
+* Projeto hospedado no Netlify: https://pokedextra.netlify.app/
 
 # React Create App Readme
 # Getting Started with Create React App
@@ -131,9 +131,15 @@ Para funcionamento do código é necessário criar o projeto no Firebase, habili
 Criar arquivo .env.local com as seguintes variaveis:
 
 REACT_APP_API_KEY
+
 REACT_APP_AUTH_DOMAIN
+
 REACT_APP_DATABASE_URL
+
 REACT_APP_PROJECT_ID
+
 REACT_APP_STORAGE_BUCKET
+
 REACT_APP_MESSAGING_SENDER_ID
+
 REACT_APP_APP_ID
